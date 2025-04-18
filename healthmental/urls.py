@@ -23,6 +23,8 @@ urlpatterns = [
     path('',include("home.urls")),
       path('ocd/', views.ocd_detail, name='ocd_detail'),
          path('gad7/', views.gad7, name='gad7'),
+        path("sitemap.xml", TemplateView.as_view(template_name="sitemap.xml", content_type="application/xml")),
+    path("robots.txt", TemplateView.as_view(template_name="robots.txt", content_type="text/plain")),
              path('anxiety/', views.anxiety, name='anxiety'),
                       path('dep/', views.dep, name='dep'),
                       path('phq9/', views.phq9, name='phq9'),        
