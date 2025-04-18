@@ -704,6 +704,22 @@ def resend_otp(request):
         messages.error(request, 'This email is not registered.')
 
     return redirect('verify_otp')
+from django.http import HttpResponse
+from django.template.loader import render_to_string
+from django.views import View
+
+class SitemapView(View):
+    def get(self, request, *args, **kwargs):
+        # Render the sitemap.xml using the template
+        sitemap_content = render_to_string('sitemap.xml', {})
+        return HttpResponse(sitemap_content, content_type="application/xml")
+
+class RobotsView(View):
+    def get(self, request, *args, **kwargs):
+        # Render the robots.txt using the template
+        robots_content = render_to_string('robots.txt', {})
+        return HttpResponse(robots_content, content_type="text/plain")
+
 def home(request):
     return render(request,"base_generic.html")
 from django.shortcuts import render, redirect
