@@ -1,0 +1,132 @@
+{% extends "base_generic.html" %}
+{% load static %}
+{% block title %}
+<title>Free Anxiety Tests 2025.Get Your Anxiety Test for free.</title>
+{% endblock title %}
+
+{% block style %}
+<meta name="description" content="Get your free anxiety test here.Best anxiety tests for self assessment.Find out anxiety in teens,adults for free.Take your free anxiety test.">
+<meta name="keywords" content="anxiety test,free anxiety test,anxiety test for free,social anxiety test,anxiety test social,free anxiety test for adults,free anxiety test for teens,social anxiety tests.">
+<meta name="author" content="MindCare Team">
+<link rel="canonical" href="https://aisearchlibrary.in/anxiety/" />
+<style>
+  .hero-sections {
+    background: url("{% static 'images/gad7-bg.jpg' %}") no-repeat center center/cover;
+    color:rgb(39, 157, 24);
+    text-align: center;
+    padding: 4rem 2rem;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+  }
+
+  .hero-sections h1 {
+    font-size: 2.8rem;
+    font-weight: bold;
+  }
+
+  .hero-sections p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 1rem auto 0;
+    line-height: 1.6;
+  }
+
+  .content-section {
+    max-width: 1000px;
+    margin: auto;
+    padding: 2rem;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.05);
+  }
+
+  .content-section h2 {
+    color:rgb(35, 145, 181);
+    margin-top: 1.5rem;
+  }
+
+  .content-section p {
+    line-height: 1.7;
+    color: #333;
+  }
+
+  .test-section {
+    margin-top: 3rem;
+    text-align: center;
+    background-color: #e3f2fd;
+    padding: 2rem;
+    border-radius: 12px;
+  }
+
+  .test-section h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color:rgb(21, 129, 188);
+  }
+
+  .test-section p {
+    max-width: 700px;
+    margin: auto;
+    color: #333;
+  }
+
+  .test-section a button {
+    margin-top: 1.5rem;
+    background-color: #0288d1;
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .test-section a button:hover {
+    background-color: #01579b;
+  }
+
+  @media (max-width: 768px) {
+    .hero-section h1 {
+      font-size: 2rem;
+    }
+    .test-section h3 {
+      font-size: 1.4rem;
+    }
+  }
+</style>
+{% endblock style %}
+
+{% block body %}
+<div class="hero-sections">
+  <h1>Free Generalized Anxiety Disorder (GAD-7) Test</h1>
+  <p>A common mental health condition that involves persistent, excessive worry about various aspects of life, such as health, work, social interactions, or everyday routine tasks.Get your free anxiety test here.</p>
+</div>
+
+<div class="content-section">
+  <h2>What is GAD-7?</h2>
+  <p>GAD-7 stands for the Generalized Anxiety Disorder 7-item scale, a tool used by healthcare providers to assess the severity of generalized anxiety disorder (GAD). It is a self-report questionnaire that helps gauge how much anxiety a person experiences in daily life.</p>
+
+  <h2>Common Symptoms of GAD</h2>
+  <ul>
+    <li>Excessive worry or fear about various aspects of life</li>
+    <li>Restlessness or feeling on edge</li>
+    <li>Fatigue or difficulty concentrating</li>
+    <li>Physical symptoms such as muscle tension or headaches</li>
+    <li>Difficulty controlling worries or fears</li>
+    <li>Sleep disturbances due to anxiety</li>
+  </ul>
+
+  <h2>Effects of GAD</h2>
+  <p>Generalized anxiety disorder can lead to significant distress and interfere with daily activities such as work, school, and relationships. While it is a treatable condition, untreated GAD can lead to long-term issues with emotional and physical health.</p>
+
+  <h2>Importance of Early Treatment</h2>
+  <p>Early intervention is crucial for managing generalized anxiety disorder. Treatment options include cognitive-behavioral therapy (CBT), medication, relaxation techniques, and lifestyle changes. With the right treatment, individuals with GAD can lead productive, fulfilling lives.</p>
+
+  <div class="test-section">
+    <h3>GAD-7 Anxiety Scale</h3>
+    <p>The GAD-7 scale is commonly used to measure the severity of anxiety symptoms. By completing the GAD-7 questionnaire, individuals can gain a clearer understanding of their anxiety level.</p>
+    <a href="{% url 'gad7' %}"><button>Take the GAD-7 Test</button></a>
+  </div>
+</div>
+{% endblock body %}
