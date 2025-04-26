@@ -1,10 +1,12 @@
 {% extends "base_generic.html" %}
+
 {% block title %}
   <title>About Us | MindCare</title>
-  {% endblock title %}
-  {% block style %}
-  <meta name="description" content="Check your mental health by various offical tests provied.Get mental health tests for ocd,social anxiety disorder,depression,panic attacks,schizophrenia,bipolar disorder,ADHD,autism,PTSD,sleep disorders.">
-  <meta name="keywords" content="mental health testing online,online mental health tests, mental health assessment tests,take a mental health test,free mental health tests online,ocd test,adhd test,ptsd test,bipolar disorder test,social anxiety disorder test,autism test,depression test,sleep disorder test,panic attacks test,schizophrenia test">
+{% endblock title %}
+
+{% block style %}
+  <meta name="description" content="Explore MindCare’s mental health resources. Take online tests for conditions like OCD, ADHD, PTSD, depression, anxiety, schizophrenia, and more. Gain insights into your mental health and improve well-being with personalized recommendations.">
+  <meta name="keywords" content="mental health test, online mental health assessments, anxiety test, depression test, ADHD test, PTSD test, schizophrenia test, mental health self-assessment, OCD test, sleep disorder test, bipolar disorder test, social anxiety disorder test, autism test, panic attack test, free mental health tests, mental health diagnosis tools">
   <meta name="author" content="MindCare Team">
   <link rel="canonical" href="https://aisearchlibrary.in/about/" />
   <style>
@@ -146,19 +148,20 @@
       }
     }
   </style>
-  {% endblock style %}
+{% endblock style %}
+
 {% block body %}
   <div class="about-container">
     <div class="about-header">
       <h1>About MindCare</h1>
-      <p>Your mental health companion,partner to support your journey toward better well-being.</p>
+      <p>Your mental health companion, your partner in supporting your journey toward better well-being.</p>
     </div>
 
     <div class="about-section">
       <h2>Our Mission</h2>
       <div class="mission">
         <p>
-          At MindCare, we strive to make mental health care more accessible, personalized, and accurate for everyone. Our mission is to empower individuals with the tools to understand their emotional and psychological well-being.we provide self-assessments, personalized recommendations, and resources to help individuals take charge of their mental health. Whether you are dealing with stress, anxiety, sleep issues,ptsd,schizophrenia,adhd,autism or any other challenge, MindCare is here to guide you every step of the way.
+          At MindCare, we strive to make mental health care more accessible, personalized, and accurate for everyone. Our mission is to empower individuals with the tools to understand their emotional and psychological well-being. We provide self-assessments, personalized recommendations, and resources to help individuals take charge of their mental health. Whether you are dealing with stress, anxiety, sleep issues, PTSD, schizophrenia, ADHD, autism, or any other challenge, MindCare is here to guide you every step of the way.
         </p>
       </div>
     </div>
@@ -197,7 +200,7 @@
     <div class="about-section">
       <h2>Understanding Anxiety Disorder</h2>
       <p>
-        Anxiety is a natural response to stress, but when it becomes excessive or chronic, it can interfere with daily activities and overall well-being. Anxiety disorders are the most common mental health conditions worldwide and can affect individuals of all ages. 
+        Anxiety is a natural response to stress, but when it becomes excessive or chronic, it can interfere with daily activities and overall well-being. Anxiety disorders are the most common mental health conditions worldwide and can affect individuals of all ages.
       </p>
       <div class="disease-detail">
         <h3>What is Anxiety Disorder?</h3>
@@ -235,8 +238,8 @@
       <p>
         If you're struggling with anxiety or other mental health concerns, our team is here to help. Start by taking one of our self-assessments today to gain insights into your mental health.
       </p>
-      <a href="{%url 'ocd_detail'%}" class="cta-btn">Start Your Assessment</a>
+      <a href="{% url 'ocd_detail' %}" class="cta-btn">Start Your Assessment</a>
     </div>
   </div>
 
-  {% endblock body %}
+{% endblock body %}
