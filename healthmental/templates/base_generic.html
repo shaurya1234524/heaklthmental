@@ -1,0 +1,821 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    
+
+    <script src="https://kit.fontawesome.com/f50c49f8a4.js" crossorigin="anonymous"></script>
+    {% block title %}
+    <title>Free mental health tests and assessments 2025,official mental health tests </title>
+    {% endblock title %}
+
+    <style>
+      body {
+        margin: 0;
+        font-family: 'Segoe UI', sans-serif;
+        background-color: #f8f9fa;
+        transition: padding-top 0.3s ease;
+      }
+
+      .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 2rem;
+        background-color: #fff;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+      }
+
+      .logo {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: #2a9d8f;
+      }
+
+      .nav-links,
+      .actions {
+        display: flex;
+        gap: 1.5rem;
+        align-items: center;
+      }
+
+      .nav-links a,
+      .btn-login {
+        text-decoration: none;
+        color: #333;
+        font-weight: 500;
+        background: none;
+        border: none;
+        cursor: pointer;
+      }
+
+      .nav-links a:hover,
+      .btn-login:hover {
+        color: #2a9d8f;
+      }
+
+      .btn-signup {
+        background-color: #2a9d8f;
+        color: white;
+        padding: 0.6rem 1.2rem;
+        border-radius: 25px;
+        border: none;
+        font-weight: 600;
+        cursor: pointer;
+      }
+
+      .btn-signup:hover {
+        background-color: #21867a;
+      }
+
+      .mobile-menu-icon {
+        display: none;
+        flex-direction: column;
+        cursor: pointer;
+      }
+
+      .mobile-menu-icon span {
+        height: 3px;
+        width: 25px;
+        background: #333;
+        margin: 4px 0;
+      }
+      .hero {
+        background-image: url("https://shaurya-bucket-5763394.s3.eu-north-1.amazonaws.com/woman-7529904.png");
+        background-size: cover;
+        background-position: center;
+        position: relative;
+        height: 90vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      
+      .hero-overlay {
+        background: rgba(0, 0, 0, 0.5);
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      
+      .hero-content {
+        text-align: center;
+        color: white;
+        max-width: 700px;
+        padding: 2rem;
+      }
+      
+      .hero-content h1 {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+        font-weight: bold;
+      }
+      
+      .hero-content p {
+        font-size: 1.2rem;
+        margin-bottom: 2rem;
+      }
+      
+      .hero-btn {
+        background-color: #2a9d8f;
+        color: white;
+        border: none;
+        padding: 0.8rem 1.5rem;
+        font-size: 1rem;
+        border-radius: 25px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+      
+      .hero-btn:hover {
+        background-color: #21867a;
+      }
+      
+      @media (max-width: 768px) {
+        .hero-content h1 {
+          font-size: 2rem;
+        }
+      
+        .hero-content p {
+          font-size: 1rem;
+        }
+      }
+      
+      .mobile-nav {
+        display: none;
+        flex-direction: column;
+        background: #fff;
+        padding: 1rem 2rem;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        position: relative;
+      }
+
+      .mobile-nav a,
+      .mobile-nav form button {
+        margin: 0.5rem 0;
+        text-align: left;
+        color: #333;
+        background: none;
+        border: none;
+        font-size: 1rem;
+        text-decoration:none;
+        font-weight: 500;
+        cursor: pointer;
+      }
+
+      .mobile-nav .btn-signup {
+        text-align: center;
+        width: 100%;
+        background-color: #2a9d8f;
+        color: white;
+        padding: 0.7rem;
+        border-radius: 25px;
+      }
+      .footer {
+        background-color: #1E1E2F;
+        color: #ffffff;
+        padding: 50px 20px 20px;
+        font-family: Arial, sans-serif;
+      }
+      
+      .footer-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        max-width: 1200px;
+        margin: auto;
+      }
+      
+      .footer-section {
+        flex: 1 1 220px;
+        margin: 20px;
+      }
+      
+      .footer-section h2, .footer-section h3 {
+        margin-bottom: 15px;
+        color: #f1f1f1;
+      }
+      
+      .footer-section p, .footer-section ul, .footer-section form {
+        font-size: 14px;
+        color: #cccccc;
+      }
+      
+      .footer-section ul {
+        list-style: none;
+        padding: 0;
+      }
+      
+      .footer-section ul li {
+        margin-bottom: 10px;
+      }
+      
+      .footer-section ul li a {
+        color: #cccccc;
+        text-decoration: none;
+        transition: color 0.3s ease;
+      }
+      
+      .footer-section ul li a:hover {
+        color: #ffffff;
+      }
+      
+      .newsletter-form input[type="email"] {
+        padding: 10px;
+        width: 70%;
+        border: none;
+        border-radius: 4px;
+        margin-bottom: 10px;
+      }
+      
+      .newsletter-form button {
+        padding: 10px 16px;
+        background-color: #4F46E5;
+        border: none;
+        color: white;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+      
+      .newsletter-form button:hover {
+        background-color: #6D5AE6;
+      }
+      
+      .social-icons {
+        margin-top: 10px;
+      }
+      
+      .social-icons a img {
+        width: 24px;
+        height: 24px;
+        margin-right: 10px;
+        filter: brightness(0) invert(1);
+        transition: transform 0.3s ease;
+      }
+      
+      .social-icons a img:hover {
+        transform: scale(1.2);
+      }
+      
+      .footer-bottom {
+        text-align: center;
+        margin-top: 30px;
+        border-top: 1px solid #333;
+        padding-top: 15px;
+        font-size: 13px;
+        color: #aaaaaa;
+      }
+      
+      /* Responsive */
+      @media (max-width: 768px) {
+        .footer-container {
+          flex-direction: column;
+          align-items: center;
+        }
+      
+        .footer-section {
+          margin: 20px 0;
+          text-align: center;
+        }
+      
+        .newsletter-form input[type="email"] {
+          width: 100%;
+        }
+      }
+      
+      @media (max-width: 768px) {
+        .nav-links,
+        .actions {
+          display: none;
+        }
+
+        .mobile-menu-icon {
+          display: flex;
+        }
+
+        .mobile-nav.show {
+          display: flex;
+        }
+      }
+
+      header {
+        background-color: #2a9d8f;
+        color: white;
+        padding: 1.5rem;
+        text-align: center;
+        font-size: 1.8rem;
+        font-weight: bold;
+      }
+
+      .container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+        padding: 2rem;
+        max-width: 1200px;
+        margin: auto;
+      }
+      /* Basic Reset */
+      * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+      }
+      
+      /* General Styles */
+     
+      
+      /* Navbar Styles */
+      .navbar {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+         
+          padding: 16px 24px;
+          
+          position: relative;
+      }
+      
+      .navbar .logo {
+          font-size: 24px;
+          font-weight: bold;
+      }
+      
+      .navbar .nav-links {
+          display: flex;
+          gap: 20px;
+      }
+      
+      .navbar .nav-links a {
+       
+          text-decoration: none;
+          font-size: 16px;
+          transition: background-color 0.3s ease;
+      }
+      
+      .navbar .nav-links a:hover {
+          
+          padding: 10px;
+          border-radius: 4px;
+      }
+      
+      /* Dropdown Styles */
+      .dropdown {
+          position: relative;
+      }
+      
+      .dropdown .dropbtn {
+         
+          color: black;
+          padding: 10px 16px;
+          font-size: 16px;
+          border: none;
+          cursor: pointer;
+          border-radius: 4px;
+          transition: background-color 0.3s ease;
+      }
+      
+      .dropdown .dropbtn:hover {
+          
+      }
+      
+      .dropdown-content {
+          display: none;
+          position: absolute;
+  background-color:white;
+          min-width: 160px;
+          z-index: 1;
+          border-radius: 4px;
+          box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+      }
+      
+      .dropdown-content a {
+          color:black;
+          padding: 12px 16px;
+          text-decoration: none;
+          display: block;
+      }
+      
+      .dropdown-content a:hover {
+          background-color:rgb(226, 226, 226);
+      }
+      
+      /* Display Dropdown on Hover */
+      .dropdown:hover .dropdown-content {
+          display: block;
+      }
+      
+      /* Actions and Mobile Menu Styles */
+      .navbar .actions {
+          display: flex;
+          gap: 10px;
+      }
+      
+      .navbar .btn-login, .btn-signup {
+          padding: 10px 16px;
+          font-size: 16px;
+          cursor: pointer;
+          border-radius: 4px;
+          border: none;
+          transition: background-color 0.3s ease;
+      }
+      
+      .navbar .btn-login {
+          background-color: #fff;
+          color:rgb(32, 160, 130);
+      }
+      
+      .navbar .btn-login:hover {
+          background-color: #f1f1f1;
+      }
+      
+      .navbar .btn-signup {
+          background-color:rgb(23, 139, 119);
+          color: white;
+      }
+      
+      .navbar .btn-signup:hover {
+          background-color:rgb(32, 137, 100);
+      }
+      
+      /* Mobile Menu Styles */
+      .mobile-menu-icon {
+          display: none;
+          cursor: pointer;
+          flex-direction: column;
+          gap: 5px;
+      }
+      
+      
+      
+   /* Mobile Navigation Styles */
+    
+      
+     
+
+      
+      /* Show Mobile Menu on Click */
+      .mobile-nav.active {
+          display: flex;
+          text-decoration:none;
+      }
+      
+      /* Responsive Styles */
+      @media (max-width: 768px) {
+          .navbar .nav-links {
+              display: none;
+              text-decoration:none;
+          }
+      
+          .navbar .mobile-menu-icon {
+              display: flex;
+          }
+      
+          .navbar .actions {
+              display: none;
+          }
+      } 
+      
+      .card {
+        background: white;
+        border-radius: 15px;
+        padding: 2rem;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        transition: transform 0.2s ease-in-out;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+      .card:hover {
+        transform: scale(1.03);
+      }
+
+      .card h3 {
+        color: #264653;
+        margin-bottom: 1rem;
+        font-size: 1.3rem;
+      }
+
+      .card button {
+        background: #e76f51;
+        color: white;
+        border: none;
+        padding: 0.7rem 1.2rem;
+        border-radius: 8px;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: background 0.3s ease;
+      }
+
+      .card button:hover {
+        background:rgb(21, 127, 98);
+      }
+    </style>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-MBWNCM2EJ7"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-MBWNCM2EJ7');
+</script>
+    {% block style %}
+    
+    <meta name="description" content="Check your mental health by various offical tests provied.Get mental health tests for ocd,social anxiety disorder,depression,panic attacks,schizophrenia,bipolar disorder,ADHD,autism,PTSD,sleep disorders.">
+    <meta name="keywords" content="mental health testing online,online mental health tests, mental health assessment tests,take a mental health test,free mental health tests online,ocd test,adhd test,ptsd test,bipolar disorder test,social anxiety disorder test,autism test,depression test,sleep disorder test,panic attacks test,schizophrenia test">
+    <meta name="author" content="Mentalhealthmatters Team">
+    <link rel="canonical" href="https://mentalhealthmatters.sbs" />
+
+    <meta property="og:title" content="Free mental health tests and assessments 2025,official mental health tests">
+    <meta property="og:description" content="Check your mental health by various offical tests provied.Get mental health tests for ocd,social anxiety disorder,depression,panic attacks,schizophrenia,bipolar disorder,ADHD,autism,PTSD,sleep disorders.">
+    <meta property="og:image" content="https://shaurya-bucket-5763394.s3.eu-north-1.amazonaws.com/Screenshot+2025-04-17+193421.png">
+    <meta property="og:url" content="https://mentalhealthmatters.sbs">
+    <meta property="og:type" content="website">
+  
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Free mental health tests and assessments 2025,official mental health tests">
+    <meta name="twitter:description" content="Check your mental health by various offical tests provied.Get mental health tests for ocd,social anxiety disorder,depression,panic attacks,schizophrenia,bipolar disorder,ADHD,autism,PTSD,sleep disorders.">
+    <meta name="twitter:image" content="https://shaurya-bucket-5763394.s3.eu-north-1.amazonaws.com/Screenshot+2025-04-17+193421.png">
+  
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="https://shaurya-bucket-5763394.s3.eu-north-1.amazonaws.com/Screenshot+2025-04-17+193421.png">
+  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    {% endblock style %}
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "MindCare",
+        "url": "https://mentalhealthmatters.sbs",
+        "logo": "https://shaurya-bucket-5763394.s3.eu-north-1.amazonaws.com/Screenshot+2025-04-17+193421.png",
+        "sameAs": [
+          "https://www.facebook.com",
+          "https://twitter.com",
+          "https://www.instagram.com"
+        ],
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+91-8218647730",
+          "contactType": "Customer Support",
+          "areaServed": "IN",
+          "availableLanguage": ["English", "Hindi"]
+        },
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Sector 15, Ghaziabad",
+          "addressLocality": "Ghaziabad",
+          "addressRegion": "Uttar Pradesh",
+          "postalCode": "201001",
+          "addressCountry": "IN"
+        },
+        "description": "Check your mental health by various offical tests provied.Get mental health tests for ocd,social anxiety disorder,depression,panic attacks,schizophrenia,bipolar disorder,ADHD,autism,PTSD,sleep disorders."
+      }
+      </script>
+      
+  </head>
+
+  <body>
+  
+    <nav class="navbar">
+      <div class="logo">mentalhealthmatters</div>
+  
+      <div class="nav-links">
+          <a href="/">Home</a>
+          
+          <!-- Dropdown for Tests -->
+          <div class="dropdown">
+              <a href="/" class="dropbtn">Tests</a>
+              <div class="dropdown-content">
+                  <a href="{% url 'ocd_detail' %}">ocd</a>
+                  <a href="{% url 'anxiety' %}">Anxiety</a>
+                  <a href="{% url 'dep' %}">depression</a>
+                  <a href="{% url 'bipolar' %}">Bipolar disorder</a>
+                  <a href="{% url 'ptsd' %}">ptsd</a>
+                  <a href="{% url 'schizophrenia' %}">Schizophrenia</a>
+                  <a href="{% url 'adhd' %}">ADHD</a>
+                  <a href="{% url 'autism' %}">Autism</a>
+                   <a href="{% url 'panic' %}">Panic Disorder</a>
+                  <a href="{% url 'sleep' %}">Sleep Disorders</a>
+                 
+              </div>
+          </div>
+  
+          <a href="{% url 'about'%}">About</a>
+          <a href="{%url 'contact'%}">Contact</a>
+      </div>
+  
+      <div class="actions">
+          {% if user.is_authenticated %}
+          <p style="background-color:rgb(33, 144, 114);color:white;padding:6px;border-radius:20px;">{{ user.username }}</p>
+          <form method="post" action="Logout">
+              {% csrf_token %}
+              <button class="btn-login">Logout</button>
+          </form>
+          {% else %}
+          <a href="{%url 'login'%}" class="btn-login">Login</a>
+          <a href="{%url 'signup'%}"><button class="btn-signup">Get Started</button></a>
+          {% endif %}
+      </div>
+  
+      <div class="mobile-menu-icon" onclick="toggleMobileMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+      </div>
+  </nav>
+  
+  <div class="mobile-nav" id="mobileNav">
+      <a href="/">Home</a>
+      <div class="dropdown">
+          <a href="#">Tests</a>
+          <div class="dropdown-content">
+            <a href="{% url 'ocd_detail' %}">ocd</a>
+            <a href="{% url 'anxiety' %}">Anxiety</a>
+            <a href="{% url 'dep' %}">depression</a>
+            <a href="{% url 'bipolar' %}">Bipolar disorder</a>
+            <a href="{% url 'ptsd' %}">ptsd</a>
+            <a href="{% url 'schizophrenia' %}">Schizophrenia</a>
+            <a href="{% url 'adhd' %}">ADHD</a>
+            <a href="{% url 'autism' %}">Autism</a>
+             <a href="{% url 'panic' %}">Panic Disorder</a>
+            <a href="{% url 'sleep' %}">Sleep Disorders</a>
+          </div>
+      </div>
+      <a href="{%url 'about'%}">About</a>
+      <a href="{%url 'contact'%}">Contact</a>
+      {% if user.is_authenticated %}
+      <p style="background-color:rgb(33, 144, 114);color:white;padding:6px;border-radius:20px;">{{ user.username }}</p>
+      <form method="post" action="Logout">
+          {% csrf_token %}
+          <button class="btn-login">Logout</button>
+      </form>
+      {% else %}
+      <a href="login" class="btn-login">Login</a>
+      <a href="signup"><button class="btn-signup">Get Started</button></a>
+      {% endif %}
+  </div>
+  
+    {% block body %}
+    <section class="hero">
+      <div class="hero-overlay">
+        <div class="hero-content">
+          <h1>Freely Test your mental health </h1>
+          <p>Your companion in understanding and improving mental health. Get Free Mental Health tests and assessments.</p>
+          <a href="#start"><button class="hero-btn">Start Your Journey</button></a>
+        </div>
+      </div>
+    </section>
+    <h1 style="text-align:center;" id="start">Select Tests</h1>
+    <div class="container">
+      <div class="card">
+        <h3>Obsessive-Compulsive Disorder (OCD)</h3>
+        <a href="{% url 'ocd_detail' %}"><button>Start Test</button></a>
+      </div>
+      <div class="card">
+        <h3>Generalized Anxiety Disorder</h3>
+        <a href="{% url 'anxiety' %}"><button>Start Test</button></a>
+      </div>
+    
+      <div class="card">
+        <h3>Depression</h3>
+        
+        <a href="{% url 'dep' %}"><button>Start Test</button></a>
+        
+      </div>
+      
+    
+      <div class="card">
+        <h3>Bipolar Disorder</h3>
+        
+        <a href="{% url 'bipolar' %}"><button>Start Test</button></a>
+      </div>
+      
+      <div class="card">
+        <h3>PTSD (Post-Traumatic Stress Disorder)</h3>
+
+        <a href="{% url 'ptsd' %}"><button>Start Test</button></a>
+      </div>
+      
+   
+      
+      <div class="card">
+        <h3>Schizophrenia</h3>
+        
+        <a href="{% url 'schizophrenia' %}"><button>Start Test</button></a>
+      </div>
+      
+      <div class="card">
+        <h3>ADHD (Attention-Deficit/Hyperactivity Disorder)</h3>
+      
+        <a href="{% url 'adhd' %}"><button>Start Test</button></a>
+      </div>
+      
+      <div class="card">
+        <h3>Autism Spectrum Disorder (ASD)</h3>
+
+        <a href="{% url 'autism' %}"><button>Start Test</button></a>
+      </div>
+      
+      <div class="card">
+        <h3>Panic Disorder</h3>
+
+        <a href="{% url 'panic' %}"><button>Start Test</button></a>
+      </div>
+    
+     
+      
+      <div class="card">
+        <h3>Sleep Disorders</h3>
+
+        <a href="{% url 'sleep' %}"><button>Start Test</button></a>
+      </div>
+      
+     
+      
+    </div>
+    
+    {% endblock body %}
+    <script>
+      function toggleMobileMenu() {
+        const nav = document.getElementById("mobileNav");
+        nav.classList.toggle("show");
+      }
+    </script>
+    <script>
+      function toggleMobileMenu() {
+          const mobileNav = document.getElementById('mobileNav');
+          mobileNav.classList.toggle('active');
+      }
+    </script>
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-section about">
+      <h2>MindCare</h2>
+      <p>Your mental health companion. We offer helpful tests, personalized insights, and support every step of the way.</p>
+    </div>
+
+    <div class="footer-section links">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/">Tests</a></li>
+        <li><a href="{%url 'about'%}">About Us</a></li>
+        <li><a href="{%url 'contact'%}">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-section contact">
+      <h3>Contact Us</h3>
+      <p><strong>Email:</strong> <a style="text-decoration:none;color:white;"href="mailto:shaurya2312046@gmail.com">mindcare@email.com</a></p>
+      <p><strong>Phone:</strong> <a style="text-decoration:none;color:white;"href="tel:+919876543210">+91 821 864 7730</a></p>
+      <p><strong>Phone:</strong> <a style="text-decoration:none;color:white;"href="https://www.google.com/maps/@28.6424805,77.411477,14.29z?entry=ttu&g_ep=EgoyMDI1MDQxMy4wIKXMDSoASAFQAw%3D%3D">address:ghaziabad,uttar pradesh,india</a></p>
+    </div>
+
+    <div class="footer-section newsletter">
+
+      <div style="padding-left:10px;margin-left:10px;"class="social-icons">
+        <a href="https://facebook.com"><i style="color:white;font-size:25px;margin-right:10px;"class="fa-brands fa-facebook"></i></a>
+        <a href="https://www.instagram.com"><i style="color:white;font-size:25px;margin-right:10px;"class="fa-brands fa-instagram"></i></a>
+        <a href="https://www.twitter.com"><i style="color:white;font-size:25px;"class="fa-brands fa-x-twitter"></i></a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom"> 
+    <p>&copy; 2025 mentalhealthmatters. All Rights Reserved.</p>
+  </div>
+</footer>
+
+  </body>
+</html>
