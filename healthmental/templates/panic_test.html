@@ -4,7 +4,9 @@
 <title>Panic Disorder Test | MindCare AI</title>
 {% endblock title %}
 {% block style %}
-<link rel="canonical" href="https://mentalhealthmatters.sbs/panic" />
+<!-- <link rel="canonical" href="https://mentalhealthmatters.sbs/panic" /> -->
+<link rel="canonical" href="{{ request.build_absolute_uri }}" />
+
 <style>
     .field-card {
         background-color: #f8fafc;
