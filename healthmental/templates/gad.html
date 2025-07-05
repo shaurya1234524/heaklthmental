@@ -26,7 +26,9 @@
 {% endblock %}
 
 {% block style %}
-<link rel="canonical" href="https://mentalhealthmatters.sbs/anxiety/" />
+<!-- <link rel="canonical" href="https://mentalhealthmatters.sbs/anxiety/" /> -->
+<link rel="canonical" href="{{ request.build_absolute_uri }}" />
+
 <style>
     body {
         font-family: 'Arial', sans-serif;
