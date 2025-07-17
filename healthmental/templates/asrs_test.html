@@ -1,117 +1,437 @@
 {% extends "base_generic.html" %}
 {% load static %}
-
-{% block title %}
-<title>Get your free ADHD test 2025.Offical ASRS ADHD test for free</title>
-{% endblock title %}
-
-{% block style %}
-<meta name="robots" content="noindex, nofollow">
-
-<style>
-  .hero-section {
-
-    color: #fff;
-    text-align: center;
-    padding: 4rem 2rem;
-    border-radius: 12px;
-    margin-bottom: 2rem;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
-  }
-
-  .hero-section h1 {
-    font-size: 2.8rem;
-    font-weight: bold;
-    color:rgb(15, 170, 49);
-  }
-
-  .hero-section p {
-    font-size: 1.1rem;
-    max-width: 800px;
-    margin: 1rem auto 0;
-    line-height: 1.6;
-    color:rgb(22, 176, 28);
-  }
-
-  .form-section {
-    max-width: 1000px;
-    margin: auto;
-    background-color: #ffffff;
-    padding: 2rem;
-    border-radius: 14px;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.06);
-  }
-
-  .form-section h2 {
-    color: #2a9d8f;
-    margin-bottom: 1rem;
-    font-size: 1.7rem;
-    text-align: center;
-  }
-
-  .form-section p {
-    color: #333;
-    text-align: center;
-    margin-bottom: 2rem;
-    font-size: 1rem;
-  }
-
-  form {
-    margin-top: 2rem;
-  }
-
-  form p {
-    font-size: 1rem;
-    margin-bottom: 1.2rem;
-  }
-
-  button[type="submit"] {
-    display: block;
-    background-color: #2a9d8f;
-    color: #fff;
-    border: none;
-    padding: 0.9rem 2rem;
-    font-size: 1.1rem;
-    border-radius: 30px;
-    cursor: pointer;
-    margin: 2rem auto 0;
-    transition: background-color 0.3s ease;
-  }
-
-  button[type="submit"]:hover {
-    background-color: #21867a;
-  }
-
-  @media (max-width: 768px) {
-    .hero-section h1 {
-      font-size: 2rem;
+{% block title %}Free ADHD Test 2025 | Official ASRS Assessment Online{% endblock title %}
+{% block meta_description %}Take our free ADHD test based on the Adult Self-Report Scale (ASRS v1.1). This scientifically validated screening tool helps identify ADHD symptoms in adults and teens. Quick, confidential, and no sign-up required.{% endblock meta_description %}
+{% block meta_keywords %}ADHD test, ASRS test, attention deficit test, ADHD screening, ADHD assessment, adult ADHD test, teen ADHD test, ADHD self-assessment, ADHD questionnaire, ADHD symptoms test, free ADHD test, ADHD diagnosis test{% endblock meta_keywords %}
+{% block meta_canonical %}<link rel="canonical" href="https://www.mentalhealthmatters.sbs/adhd-test/" />{% endblock meta_canonical %}
+{% block meta_og %}
+    <meta property="og:title" content="Free ADHD Test 2025 | Official ASRS Assessment Online" />
+    <meta property="og:description" content="Take our free ADHD test based on the Adult Self-Report Scale (ASRS v1.1). This scientifically validated screening tool helps identify ADHD symptoms in adults and teens. Quick, confidential, and no sign-up required." />
+    <meta property="og:image" content="https://shaurya-bucket-5763394.s3.eu-north-1.amazonaws.com/adhd-test-og-image.jpg" />
+    <meta property="og:url" content="https://www.mentalhealthmatters.sbs/adhd-test/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en_US" />
+{% endblock meta_og %}
+{% block meta_twitter %}
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Free ADHD Test 2025 | Official ASRS Assessment Online" />
+    <meta name="twitter:description" content="Take our free ADHD test based on the Adult Self-Report Scale (ASRS v1.1). This scientifically validated screening tool helps identify ADHD symptoms in adults and teens. Quick, confidential, and no sign-up required." />
+    <meta name="twitter:image" content="https://shaurya-bucket-5763394.s3.eu-north-1.amazonaws.com/adhd-test-twitter-image.jpg" />
+{% endblock meta_twitter %}
+{% block structured_data %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MedicalTest",
+  "name": "ADHD Screening Test (ASRS v1.1)",
+  "description": "Free online screening test for Attention-Deficit/Hyperactivity Disorder based on the Adult Self-Report Scale (ASRS v1.1)",
+  "url": "https://www.mentalhealthmatters.sbs/adhd-test/",
+  "provider": {
+    "@type": "Organization",
+    "name": "MentalHealthMatters",
+    "url": "https://www.mentalhealthmatters.sbs"
+  },
+  "category": "https://schema.org/MedicalCondition",
+  "targetCondition": {
+    "@type": "MedicalCondition",
+    "name": "Attention-Deficit/Hyperactivity Disorder"
+  },
+  "hasMeasurement": [
+    {
+      "@type": "MedicalTest",
+      "name": "Adult ADHD Self-Report Scale (ASRS v1.1)",
+      "description": "18-item self-report questionnaire developed by the World Health Organization for screening adult ADHD"
     }
-
-    .form-section {
-      padding: 1.5rem;
-    }
-
-    button[type="submit"] {
-      width: 100%;
-    }
+  ],
+  "knowsAbout": [
+    "ADHD",
+    "Attention Deficit Hyperactivity Disorder",
+    "ASRS",
+    "Adult Self-Report Scale",
+    "ADHD Screening",
+    "Mental Health Assessment"
+  ],
+  "howPerformed": {
+    "@type": "HowToStep",
+    "text": "Complete the online questionnaire with multiple-choice questions about your behavior and feelings",
+    "position": 1
+  },
+  "howPerformed": {
+    "@type": "HowToStep",
+    "text": "Receive instant results with personalized insights and recommendations",
+    "position": 2
   }
-</style>
-{% endblock style %}
-
+}
+</script>
+{% endblock structured_data %}
 {% block body %}
+<!-- Skip to Content Link for Accessibility -->
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
 <div class="hero-section">
   <h1>ADHD Screening Test (ASRS v1.1)</h1>
   <p>Screen yourself for Attention-Deficit/Hyperactivity Disorder using the Adult Self-Report Scale.</p>
 </div>
 
-<div class="form-section">
+<div class="form-section" id="main-content">
   <h2>ASRS v1.1 Part A</h2>
-  <p>Answer the following questions based on how you’ve felt and conducted yourself over the past 6 months.</p>
-
-  <form method="POST">
+  <p>Answer the following questions based on how you've felt and conducted yourself over the past 6 months.</p>
+  
+  <div class="test-intro">
+    <p><strong>About this test:</strong> The Adult ADHD Self-Report Scale (ASRS v1.1) is a widely used screening tool developed by the World Health Organization. This 18-item questionnaire helps identify symptoms of ADHD in adults. Part A contains the first 6 questions which are most predictive of ADHD.</p>
+    <p><strong>Note:</strong> This is a screening tool, not a diagnostic instrument. For a formal diagnosis, please consult a qualified healthcare professional.</p>
+  </div>
+  
+  <form method="POST" class="adhd-form">
     {% csrf_token %}
     {{ form.as_p }}
-    <button type="submit">Submit</button>
+    <div class="form-footer">
+      <button type="submit" class="submit-btn">Submit Answers</button>
+    </div>
   </form>
+  
+  <div class="test-disclaimer">
+    <p><strong>Disclaimer:</strong> This test is for informational purposes only. It does not constitute medical advice, diagnosis, or treatment. If you are concerned about ADHD, please consult with a qualified healthcare professional.</p>
+  </div>
 </div>
-{% endblock body %}
+
+<!-- Hidden SEO content for accessibility -->
+<div aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;">
+  <div vocab="https://schema.org/" typeof="MedicalTest">
+    <h1 property="name">ADHD Screening Test</h1>
+    <p property="description">Free online screening test for Attention-Deficit/Hyperactivity Disorder based on the Adult Self-Report Scale (ASRS v1.1)</p>
+    <div property="provider" typeof="Organization">
+      <span property="name">MentalHealthMatters</span>
+    </div>
+  </div>
+</div>
+{% endblock %}
+{% block style %}
+<style>
+  /* Critical CSS - Above the fold */
+  :root {
+    --primary: #2a9d8f;
+    --primary-dark: #21867a;
+    --secondary: #457b9d;
+    --secondary-dark: #1d3557;
+    --text: #333;
+    --text-light: #666;
+    --background: #f4fafd;
+    --white: #ffffff;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+  }
+  
+  /* Base Styles */
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: var(--background);
+    color: var(--text);
+    line-height: 1.6;
+  }
+  
+  /* Skip Link */
+  .skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: var(--primary);
+    color: white;
+    padding: 8px;
+    z-index: 100;
+    transition: top 0.3s;
+  }
+  
+  .skip-link:focus {
+    top: 0;
+  }
+  
+  /* Hero Section */
+  .hero-section {
+    background: url("{% static 'images/adhd-bg.jpg' %}") no-repeat center center/cover;
+    color: #fff;
+    text-align: center;
+    padding: 4rem 2rem;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+    position: relative;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  }
+  
+  .hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+  }
+  
+  .hero-section > * {
+    position: relative;
+    z-index: 1;
+  }
+  
+  .hero-section h1 {
+    font-size: 2.8rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: #fff;
+  }
+  
+  .hero-section p {
+    font-size: 1.1rem;
+    max-width: 800px;
+    margin: 0 auto 1rem;
+    line-height: 1.6;
+    color: #fff;
+  }
+  
+  /* Form Section */
+  .form-section {
+    max-width: 1000px;
+    margin: 0 auto 3rem;
+    background-color: var(--white);
+    padding: 2.5rem;
+    border-radius: 14px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.06);
+  }
+  
+  .form-section h2 {
+    color: var(--secondary);
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+    text-align: center;
+    position: relative;
+    padding-bottom: 0.5rem;
+  }
+  
+  .form-section h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: var(--secondary);
+  }
+  
+  .form-section p {
+    color: var(--text);
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+  }
+  
+  /* Test Introduction */
+  .test-intro {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background: #f0f9ff;
+    border-radius: 12px;
+    border-left: 4px solid var(--secondary);
+  }
+  
+  .test-intro p {
+    margin-bottom: 0.8rem;
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  
+  /* Form Styling */
+  form {
+    margin-top: 1.5rem;
+  }
+  
+  form p {
+    font-size: 1rem;
+    margin-bottom: 1.2rem;
+  }
+  
+  .adhd-form .form-row {
+    margin-bottom: 1.5rem;
+  }
+  
+  .adhd-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: var(--secondary);
+  }
+  
+  .adhd-form select, .adhd-form input[type="text"] {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+  }
+  
+  .adhd-form select:focus, .adhd-form input[type="text"]:focus {
+    border-color: var(--secondary);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(69, 123, 157, 0.2);
+  }
+  
+  .adhd-form ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0.5rem 0;
+  }
+  
+  .adhd-form li {
+    margin-bottom: 0.5rem;
+    padding-left: 1.5rem;
+    position: relative;
+  }
+  
+  .adhd-form li::before {
+    content: '\f00c';
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    position: absolute;
+    left: 0;
+    color: var(--secondary);
+  }
+  
+  /* Form Footer */
+  .form-footer {
+    text-align: center;
+    margin-top: 2rem;
+  }
+  
+  .submit-btn {
+    background: var(--secondary);
+    color: var(--white);
+    border: none;
+    padding: 0.9rem 2rem;
+    font-size: 1.1rem;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: var(--transition);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .submit-btn:hover {
+    background: var(--secondary-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Disclaimer */
+  .test-disclaimer {
+    margin-top: 2rem;
+    padding: 1rem;
+    background: #fff8f8;
+    border-radius: 12px;
+    border-left: 4px solid #dc3545;
+    font-size: 0.9rem;
+    color: #666;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .hero-section h1 {
+      font-size: 2rem;
+    }
+    
+    .hero-section p {
+      font-size: 1rem;
+      padding: 0 1rem;
+    }
+    
+    .form-section {
+      padding: 1.5rem;
+    }
+    
+    .form-section h2 {
+      font-size: 1.5rem;
+    }
+    
+    .submit-btn {
+      width: 100%;
+      padding: 1rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .form-section {
+      padding: 1rem;
+    }
+    
+    .test-intro {
+      padding: 1rem;
+    }
+  }
+  
+  /* Form Focus States */
+  .adhd-form .form-row:focus-within {
+    box-shadow: 0 0 0 3px rgba(69, 123, 157, 0.3);
+    border-radius: 6px;
+  }
+  
+  /* Print Styles */
+  @media print {
+    .test-intro, .test-disclaimer, .form-footer {
+      display: none;
+    }
+    
+    .adhd-form .form-row {
+      page-break-inside: avoid;
+    }
+  }
+</style>
+{% endblock %}
+{% block scripts %}
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Add focus styles for accessibility
+    const formRows = document.querySelectorAll('.adhd-form .form-row');
+    formRows.forEach(row => {
+      const inputs = row.querySelectorAll('input, select');
+      inputs.forEach(input => {
+        input.addEventListener('focus', function() {
+          row.style.boxShadow = '0 0 0 3px rgba(69, 123, 157, 0.3)';
+          row.style.borderRadius = '6px';
+        });
+        
+        input.addEventListener('blur', function() {
+          row.style.boxShadow = '';
+        });
+      });
+    });
+    
+    // Form submission handling
+    const form = document.querySelector('.adhd-form');
+    if (form) {
+      form.addEventListener('submit', function(e) {
+        // Validate form before submission
+        let isValid = true;
+        const requiredFields = form.querySelectorAll('input[required]');
+        
+        requiredFields.forEach(field => {
+          if (!field.value) {
+            field.parentElement.style.boxShadow = '0 0 0 3px rgba(220, 53, 69, 0.3)';
+            isValid = false;
+          }
+        });
+        
+        if (!isValid) {
+          e.preventDefault();
+          // Scroll to first error
+          const firstError = form.querySelector('.error');
+          if (firstError) {
+            firstError.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          }
+        }
+      });
+    }
+  });
+</script>
+{% endblock %}
