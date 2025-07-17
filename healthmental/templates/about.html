@@ -1,577 +1,241 @@
 {% extends "base_generic.html" %}
-{% load static %}
-{% block title %}About Us | MindCare - Mental Health Testing & Assessments{% endblock title %}
-{% block meta_description %}Explore MindCare's mental health resources. Take online tests for conditions like OCD, ADHD, PTSD, depression, anxiety, schizophrenia, and more. Gain insights into your mental health and improve well-being with personalized recommendations.{% endblock meta_description %}
-{% block meta_keywords %}mental health test, online mental health assessments, anxiety test, depression test, ADHD test, PTSD test, schizophrenia test, mental health self-assessment, OCD test, sleep disorder test, bipolar disorder test, social anxiety disorder test, autism test, panic attack test, free mental health tests, mental health diagnosis tools{% endblock meta_keywords %}
-{% block meta_canonical %}<link rel="canonical" href="https://www.mentalhealthmatters.sbs/about/" />{% endblock meta_canonical %}
-{% block meta_og %}
-    <meta property="og:title" content="About MindCare | Your Mental Health Partner" />
-    <meta property="og:description" content="Explore MindCare's mental health resources. Take online tests for conditions like OCD, ADHD, PTSD, depression, anxiety, schizophrenia, and more. Gain insights into your mental health and improve well-being with personalized recommendations." />
-    <meta property="og:image" content="https://shaurya-bucket-5763394.s3.eu-north-1.amazonaws.com/mindcare-og-image.jpg" />
-    <meta property="og:url" content="https://www.mentalhealthmatters.sbs/about/" />
-    <meta property="og:type" content="website" />
-    <meta property="og:locale" content="en_US" />
-{% endblock meta_og %}
-{% block meta_twitter %}
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="About MindCare | Your Mental Health Partner" />
-    <meta name="twitter:description" content="Explore MindCare's mental health resources. Take online tests for conditions like OCD, ADHD, PTSD, depression, anxiety, schizophrenia, and more. Gain insights into your mental health and improve well-being with personalized recommendations." />
-    <meta name="twitter:image" content="https://shaurya-bucket-5763394.s3.eu-north-1.amazonaws.com/mindcare-twitter-image.jpg" />
-{% endblock meta_twitter %}
-{% block structured_data %}
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "MindCare",
-  "url": "https://www.mentalhealthmatters.sbs/about/",
-  "logo": "https://shaurya-bucket-5763394.s3.eu-north-1.amazonaws.com/mindcare-logo.png",
-  "description": "MindCare provides mental health assessments and resources for conditions like OCD, ADHD, PTSD, depression, anxiety, schizophrenia, and more. Our mission is to make mental health care more accessible and personalized for everyone.",
-  "foundingDate": "2023",
-  "foundingLocation": {
-    "@type": "Place",
-    "name": "Ghaziabad, Uttar Pradesh, India"
-  },
-  "contactPoint": {
-    "@type": "ContactPoint",
-    "telephone": "+91-8218647730",
-    "contactType": "Customer Service",
-    "areaServed": "IN",
-    "availableLanguage": ["English", "Hindi"]
-  },
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "Sector 15",
-    "addressLocality": "Ghaziabad",
-    "addressRegion": "Uttar Pradesh",
-    "postalCode": "201001",
-    "addressCountry": "IN"
-  },
-  "sameAs": [
-    "https://www.facebook.com",
-    "https://twitter.com",
-    "https://www.instagram.com"
-  ],
-  "knowsAbout": [
-    "Mental Health",
-    "Psychological Assessment",
-    "Anxiety Disorders",
-    "Depression",
-    "ADHD",
-    "PTSD",
-    "Schizophrenia",
-    "OCD",
-    "Sleep Disorders"
-  ]
-}
-</script>
-{% endblock structured_data %}
-{% block body %}
-<!-- Skip to Content Link for Accessibility -->
-<a href="#main-content" class="skip-link">Skip to main content</a>
 
-<div class="about-container">
-  <div class="about-header">
-    <h1>About MindCare</h1>
-    <p>Your mental health companion, your partner in supporting your journey toward better well-being.</p>
-  </div>
-  
-  <main id="main-content">
-    <section class="about-section">
+{% block title %}
+  <title>About Us | MindCare</title>
+{% endblock title %}
+
+{% block style %}
+  <meta name="description" content="Explore MindCare’s mental health resources. Take online tests for conditions like OCD, ADHD, PTSD, depression, anxiety, schizophrenia, and more. Gain insights into your mental health and improve well-being with personalized recommendations.">
+  <meta name="keywords" content="mental health test, online mental health assessments, anxiety test, depression test, ADHD test, PTSD test, schizophrenia test, mental health self-assessment, OCD test, sleep disorder test, bipolar disorder test, social anxiety disorder test, autism test, panic attack test, free mental health tests, mental health diagnosis tools">
+  <meta name="author" content="MindCare Team">
+  <link rel="canonical" href="https://www.mentalhealthmatters.sbs/about/" />
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f7f9fc;
+      color: #333;
+    }
+
+    .about-container {
+      max-width: 1200px;
+      margin: 60px auto;
+      padding: 20px;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    .about-header {
+      text-align: center;
+      padding-bottom: 40px;
+    }
+
+    .about-header h1 {
+      font-size: 50px;
+      color: #2a3f85;
+      margin-bottom: 15px;
+      line-height: 1.2;
+    }
+
+    .about-header p {
+      font-size: 18px;
+      color: #666;
+      max-width: 900px;
+      margin: auto;
+      line-height: 1.8;
+    }
+
+    .about-section {
+      margin: 40px 0;
+    }
+
+    .about-section h2 {
+      font-size: 30px;
+      color: #2a3f85;
+      margin-bottom: 15px;
+      line-height: 1.3;
+    }
+
+    .about-section p {
+      font-size: 16px;
+      line-height: 1.8;
+      color: #444;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .mission {
+      background-color: #eef3fb;
+      padding: 25px;
+      border-radius: 10px;
+      margin-top: 30px;
+    }
+
+    .services {
+      display: flex;
+      justify-content: space-between;
+      gap: 30px;
+      flex-wrap: wrap;
+      margin-top: 25px;
+    }
+
+    .service-box {
+      flex: 1 1 30%;
+      background-color: #f3f6fd;
+      padding: 25px;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    }
+
+    .service-box h3 {
+      margin-bottom: 12px;
+      color: #2a3f85;
+      font-size: 22px;
+    }
+
+    .service-box p {
+      font-size: 15px;
+      color: #666;
+      line-height: 1.6;
+    }
+
+    .disease-detail {
+      margin-top: 40px;
+    }
+
+    .cta-button {
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .cta-button a {
+      display: inline-block;
+      background-color: #2a3f85;
+      color: white;
+      font-weight: bold;
+      padding: 12px 30px;
+      border-radius: 50px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .cta-button a:hover {
+      background-color: #4e73df;
+    }
+
+    @media (max-width: 768px) {
+      .about-header h1 {
+        font-size: 36px;
+      }
+
+      .about-section h2 {
+        font-size: 24px;
+      }
+
+      .service-box {
+        flex: 1 1 45%;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .service-box {
+        flex: 1 1 100%;
+      }
+    }
+  </style>
+{% endblock style %}
+
+{% block body %}
+  <div class="about-container">
+    <div class="about-header">
+      <h1>About MindCare</h1>
+      <p>Your mental health companion, your partner in supporting your journey toward better well-being.</p>
+    </div>
+
+    <div class="about-section">
+
+
+
+
+
+
+
       <h2>Our Mission</h2>
       <div class="mission">
         <p>
           At MindCare, we strive to make mental health care more accessible, personalized, and accurate for everyone. Our mission is to empower individuals with the tools to understand their emotional and psychological well-being. We provide self-assessments, personalized recommendations, and resources to help individuals take charge of their mental health. Whether you are dealing with stress, anxiety, sleep issues, PTSD, schizophrenia, ADHD, autism, or any other challenge, MindCare is here to guide you every step of the way.
         </p>
       </div>
-    </section>
-    
-    <section class="about-section">
+    </div>
+
+    <div class="about-section">
       <h2>Our Approach</h2>
       <p>
         MindCare takes a holistic approach to mental health. We provide psychological research to create assessments that provide personalized insights into your mental health. Our assessments are based on scientific research and designed to give you a deeper understanding of your emotional state. We believe in breaking the stigma surrounding mental health by making self-assessments easy to access and understand, allowing users to take control of their mental well-being.
       </p>
-    </section>
-    
-    <section class="about-section">
+    </div>
+
+    <div class="about-section">
       <h2>Our Services</h2>
       <div class="services">
         <div class="service-box">
-          <h3>Mental Health Assessments</h3>
+          <h3> Mental Health Assessments</h3>
           <p>
             MindCare provides a variety of scientifically-designed self-assessments that evaluate symptoms related to anxiety, depression, sleep disorders, OCD, and more. These tools help users identify potential mental health challenges and gain a better understanding of their emotional well-being.
           </p>
-        </div>
-        <div class="service-box">
-          <h3>Personalized Actionable Insights</h3>
-          <p>
-            Based on your results, we provide personalized recommendations to improve mental health. These insights are practical, actionable, and backed by research, helping you take steps to enhance your emotional well-being.
-          </p>
-        </div>
-        <div class="service-box">
-          <h3>Confidential & Secure Platform</h3>
-          <p>
-            Your privacy is our priority. All your data is kept secure and confidential. We adhere to the highest standards of data privacy and security to ensure your peace of mind.
+@@ -195,51 +115,463 @@ <h3>Confidential & Secure Platform</h3>
           </p>
         </div>
       </div>
-    </section>
-    
-    <section class="about-section">
-      <h2>Our Team</h2>
+    </div>
+
+    <div class="about-section">
+      <h2>Understanding Anxiety Disorder</h2>
       <p>
-        MindCare is composed of mental health professionals, researchers, and developers dedicated to creating accessible mental health tools. Our team includes psychologists, psychiatrists, and software engineers who work together to ensure our assessments are both scientifically valid and user-friendly.
+        Anxiety is a natural response to stress, but when it becomes excessive or chronic, it can interfere with daily activities and overall well-being. Anxiety disorders are the most common mental health conditions worldwide and can affect individuals of all ages.
       </p>
-      <p>
-        We collaborate with leading mental health institutions and continuously update our assessments based on the latest research and clinical guidelines.
-      </p>
-    </section>
-    
-    <section class="about-section">
-      <h2>Why Choose MindCare?</h2>
-      <ul>
-        <li><strong>Scientifically Validated:</strong> Our assessments are based on established clinical tools and research.</li>
-        <li><strong>Easy to Use:</strong> Simple, intuitive interface for all users.</li>
-        <li><strong>Comprehensive:</strong> Covering a wide range of mental health conditions.</li>
-        <li><strong>Confidential:</strong> Your privacy is protected at all times.</li>
-        <li><strong>Free Access:</strong> Most of our assessments are available at no cost.</li>
-      </ul>
-    </section>
-    
+      <div class="disease-detail">
+        <h3>What is Anxiety Disorder?</h3>
+        <p>
+          Anxiety disorder is characterized by persistent and excessive worry, fear, or nervousness about everyday situations. These feelings can be overwhelming and often occur without any obvious trigger. There are several types of anxiety disorders, including Generalized Anxiety Disorder (GAD), Panic Disorder, Social Anxiety Disorder, and specific phobias.
+        </p>
+      </div>
+
+      <div class="disease-detail">
+        <h3>Common Symptoms of Anxiety</h3>
+        <ul>
+          <li>Excessive worry or fear that is hard to control</li>
+          <li>Restlessness or feeling on edge</li>
+          <li>Fatigue and difficulty concentrating</li>
+          <li>Physical symptoms such as rapid heartbeat, sweating, and shaking</li>
+          <li>Difficulty sleeping or staying asleep</li>
+          <li>Avoidance of situations or places that cause anxiety</li>
+        </ul>
+      </div>
+
+      <div class="disease-detail">
+        <h3>Managing Anxiety Disorders</h3>
+        <p>
+          Anxiety disorders are treatable. Professional help, including therapy, medication, and self-care, can greatly improve quality of life for those affected.
+        </p>
+        <ul>
+          <li><strong>Cognitive Behavioral Therapy (CBT):</strong> A proven approach to changing negative thought patterns.</li>
+          <li><strong>Medication:</strong> In some cases, medications such as antidepressants or anti-anxiety medications may be prescribed to alleviate symptoms.</li>
+          <li><strong>Self-care:</strong> Physical activity, mindfulness meditation, and relaxation techniques can help reduce anxiety.</li>
+        </ul>
+      </div>
+    </div>
+
     <div class="cta-button">
       <p>
-        Ready to take the first step toward better mental health? Start with one of our self-assessments today.
+        If you're struggling with anxiety or other mental health concerns, our team is here to help. Start by taking one of our self-assessments today to gain insights into your mental health.
       </p>
       <a href="{% url 'ocd_detail' %}" class="cta-btn">Start Your Assessment</a>
     </div>
-  </main>
-</div>
+  </div>
 
-<!-- Footer -->
-<footer class="footer">
-  <div class="footer-container">
-    <div class="footer-section about">
-      <h2>MindCare</h2>
-      <p>Your mental health companion. We offer helpful tests, personalized insights, and support every step of the way.</p>
-    </div>
-    
-    <div class="footer-section links">
-      <h3>Quick Links</h3>
-      <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/tests/">Tests</a></li>
-        <li><a href="{%url 'about'%}">About Us</a></li>
-        <li><a href="{%url 'contact'%}">Contact</a></li>
-      </ul>
-    </div>
-    
-    <div class="footer-section contact">
-      <h3>Contact Us</h3>
-      <p><strong>Email:</strong> <a style="text-decoration:none;color:white;"href="mailto:info@mentalhealthmatters.sbs">info@mentalhealthmatters.sbs</a></p>
-      <p><strong>Phone:</strong> <a style="text-decoration:none;color:white;"href="tel:+919876543210">+91 821 864 7730</a></p>
-      <p><strong>Address:</strong> Ghaziabad, Uttar Pradesh, India</p>
-    </div>
-    
-    <div class="footer-section newsletter">
-      <h3>Stay Updated</h3>
-      <form class="newsletter-form">
-        <input type="email" placeholder="Your email address" required>
-        <button type="submit">Subscribe</button>
-      </form>
-      <div class="social-icons">
-        <a href="https://facebook.com"><i class="fab fa-facebook-f"></i></a>
-        <a href="https://www.instagram.com"><i class="fab fa-instagram"></i></a>
-        <a href="https://www.twitter.com"><i class="fab fa-twitter"></i></a>
-      </div>
-    </div>
-  </div>
-  
-  <div class="footer-bottom"> 
-    <p>&copy; 2025 MindCare. All Rights Reserved.</p>
-  </div>
-</footer>
-{% endblock body %}
-{% block style %}
-<style>
-  /* Critical CSS - Above the fold */
-  :root {
-    --primary: #2a3f85;
-    --primary-dark: #1e3371;
-    --secondary: #4e73df;
-    --text: #333;
-    --text-light: #666;
-    --background: #f7f9fc;
-    --white: #ffffff;
-    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    --transition: all 0.3s ease;
-  }
-  
-  /* Base Styles */
-  body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 0;
-    padding: 0;
-    background: var(--background);
-    color: var(--text);
-    line-height: 1.6;
-  }
-  
-  /* Skip Link */
-  .skip-link {
-    position: absolute;
-    top: -40px;
-    left: 0;
-    background: var(--primary);
-    color: white;
-    padding: 8px;
-    z-index: 100;
-    transition: top 0.3s;
-  }
-  
-  .skip-link:focus {
-    top: 0;
-  }
-  
-  /* Container */
-  .about-container {
-    max-width: 1200px;
-    margin: 40px auto;
-    padding: 30px;
-    background: var(--white);
-    border-radius: 12px;
-    box-shadow: var(--shadow);
-  }
-  
-  /* Header */
-  .about-header {
-    text-align: center;
-    padding-bottom: 30px;
-    border-bottom: 1px solid #eee;
-    margin-bottom: 30px;
-  }
-  
-  .about-header h1 {
-    font-size: 2.5rem;
-    color: var(--primary);
-    margin-bottom: 15px;
-    font-weight: 700;
-  }
-  
-  .about-header p {
-    font-size: 1.1rem;
-    color: var(--text-light);
-    max-width: 800px;
-    margin: 0 auto;
-  }
-  
-  /* Sections */
-  .about-section {
-    margin-bottom: 30px;
-  }
-  
-  .about-section h2 {
-    font-size: 1.8rem;
-    color: var(--primary);
-    margin-bottom: 15px;
-    position: relative;
-    padding-bottom: 10px;
-  }
-  
-  .about-section h2::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 60px;
-    height: 3px;
-    background: var(--secondary);
-  }
-  
-  .about-section p {
-    font-size: 1rem;
-    line-height: 1.7;
-    color: var(--text);
-    margin-bottom: 20px;
-  }
-  
-  /* Mission */
-  .mission {
-    background-color: #f0f4ff;
-    padding: 20px;
-    border-radius: 10px;
-    border-left: 4px solid var(--secondary);
-    margin: 20px 0;
-  }
-  
-  /* Services */
-  .services {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 25px;
-    margin: 20px 0;
-  }
-  
-  .service-box {
-    background-color: #f8f9fa;
-    padding: 25px;
-    border-radius: 10px;
-    text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-    transition: var(--transition);
-  }
-  
-  .service-box:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
-  }
-  
-  .service-box h3 {
-    margin-bottom: 12px;
-    color: var(--primary);
-    font-size: 1.3rem;
-  }
-  
-  .service-box p {
-    font-size: 1rem;
-    color: var(--text-light);
-    line-height: 1.6;
-  }
-  
-  /* Lists */
-  .about-section ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 15px 0;
-  }
-  
-  .about-section ul li {
-    margin-bottom: 10px;
-    padding-left: 30px;
-    position: relative;
-    font-size: 1rem;
-  }
-  
-  .about-section ul li::before {
-    content: '\f00c';
-    font-family: 'Font Awesome 5 Free';
-    font-weight: 900;
-    position: absolute;
-    left: 0;
-    color: var(--secondary);
-  }
-  
-  /* CTA Button */
-  .cta-button {
-    text-align: center;
-    margin: 40px 0;
-  }
-  
-  .cta-button p {
-    font-size: 1.1rem;
-    color: var(--text);
-    margin-bottom: 20px;
-  }
-  
-  .cta-btn {
-    display: inline-block;
-    background-color: var(--primary);
-    color: white;
-    font-weight: bold;
-    padding: 12px 30px;
-    border-radius: 50px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    text-decoration: none;
-    transition: var(--transition);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-  
-  .cta-btn:hover {
-    background-color: var(--primary-dark);
-    transform: translateY(-2px);
-    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
-  }
-  
-  /* Responsive Design */
-  @media (max-width: 768px) {
-    .about-container {
-      padding: 20px;
-      margin: 20px auto;
-    }
-    
-    .about-header h1 {
-      font-size: 2rem;
-    }
-    
-    .about-section h2 {
-      font-size: 1.5rem;
-    }
-    
-    .services {
-      grid-template-columns: 1fr;
-    }
-    
-    .cta-btn {
-      width: 100%;
-      padding: 15px;
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .about-header h1 {
-      font-size: 1.8rem;
-    }
-    
-    .about-section h2 {
-      font-size: 1.3rem;
-    }
-  }
-  
-  /* Footer Styles */
-  .footer {
-    background-color: #1E1E2F;
-    color: #ffffff;
-    padding: 50px 20px 20px;
-    font-family: Arial, sans-serif;
-    margin-top: 40px;
-  }
-  
-  .footer-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  
-  .footer-section {
-    flex: 1 1 250px;
-    margin: 10px;
-  }
-  
-  .footer-section h2, .footer-section h3 {
-    margin-bottom: 15px;
-    color: #f1f1f1;
-  }
-  
-  .footer-section p, .footer-section ul, .footer-section form {
-    font-size: 14px;
-    color: #cccccc;
-  }
-  
-  .footer-section ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .footer-section ul li {
-    margin-bottom: 10px;
-  }
-  
-  .footer-section ul li a {
-    color: #cccccc;
-    text-decoration: none;
-    transition: color 0.3s ease;
-  }
-  
-  .footer-section ul li a:hover {
-    color: #ffffff;
-  }
-  
-  .newsletter-form input[type="email"] {
-    padding: 10px;
-    width: 70%;
-    border: none;
-    border-radius: 4px;
-    margin-bottom: 10px;
-  }
-  
-  .newsletter-form button {
-    padding: 10px 16px;
-    background-color: #4F46E5;
-    border: none;
-    color: white;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .newsletter-form button:hover {
-    background-color: #6D5AE6;
-  }
-  
-  .social-icons {
-    margin-top: 10px;
-  }
-  
-  .social-icons a img {
-    width: 24px;
-    height: 24px;
-    margin-right: 10px;
-    filter: brightness(0) invert(1);
-    transition: transform 0.3s ease;
-  }
-  
-  .social-icons a:hover img {
-    transform: scale(1.2);
-  }
-  
-  .footer-bottom {
-    text-align: center;
-    margin-top: 30px;
-    border-top: 1px solid #333;
-    padding-top: 15px;
-    font-size: 13px;
-    color: #aaaaaa;
-  }
-  
-  /* Responsive */
-  @media (max-width: 768px) {
-    .footer-container {
-      flex-direction: column;
-      align-items: center;
-    }
-    
-    .footer-section {
-      margin: 20px 0;
-      text-align: center;
-    }
-    
-    .newsletter-form input[type="email"] {
-      width: 100%;
-    }
-  }
-</style>
-{% endblock style %}
-{% block scripts %}
-<script>
-  // Form submission handler
-  document.addEventListener('DOMContentLoaded', function() {
-    const newsletterForm = document.querySelector('.newsletter-form');
-    if (newsletterForm) {
-      newsletterForm.addEventListener('submit', function(e) {
-        e.preventDefault();
-        const email = this.querySelector('input[type="email"]').value;
-        
-        if (email) {
-          // In a real application, you would send this to your server
-          alert(`Thank you for subscribing with ${email}!`);
-          this.reset();
-        }
-      });
-    }
-    
-    // Add focus styles for accessibility
-    const ctaBtn = document.querySelector('.cta-btn');
-    if (ctaBtn) {
-      ctaBtn.addEventListener('focus', function() {
-        this.style.boxShadow = '0 0 0 3px rgba(78, 115, 223, 0.3)';
-      });
-      
-      ctaBtn.addEventListener('blur', function() {
-        this.style.boxShadow = '0 4px 6px rgba(0, 0, 0, 0.1)';
-      });
-    }
-  });
-</script>
-{% endblock scripts %}
