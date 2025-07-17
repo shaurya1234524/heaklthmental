@@ -1,116 +1,97 @@
 {% extends "base_generic.html" %}
 {% load static %}
-
-{% block title %}
-<title>Free Anxiety & Depression Tests 2025 | Take Your Social & General Anxiety Test</title>
-{% endblock title %}
-
-{% block style %}
-<meta name="description" content="Free anxiety and depression test for adults and teens. Take online tests for social anxiety, phobias, health anxiety and more. No sign-up required.">
-<meta name="keywords" content="anxiety test free, anxiety test online free, social anxiety test free, anxiety depression test free, free depression and anxiety test, anxiety test for teens, phobia test free, health anxiety test, anxiety test for adults">
-<meta name="author" content="MindCare Team">
-<link rel="canonical" href="https://www.mentalhealthmatters.sbs/anxiety/" />
-
-<style>
-  .hero-sections {
-    background: url("{% static 'images/gad7-bg.jpg' %}") no-repeat center center/cover;
-    color: rgb(39, 157, 24);
-    text-align: center;
-    padding: 4rem 2rem;
-    border-radius: 10px;
-    margin-bottom: 2rem;
-  }
-
-  .hero-sections h1 {
-    font-size: 2.8rem;
-    font-weight: bold;
-  }
-
-  .hero-sections p {
-    font-size: 1.2rem;
-    max-width: 800px;
-    margin: 1rem auto 0;
-    line-height: 1.6;
-  }
-
-  .content-section {
-    max-width: 1000px;
-    margin: auto;
-    padding: 2rem;
-    background-color: #ffffff;
-    border-radius: 12px;
-    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.05);
-  }
-
-  .content-section h2 {
-    color: rgb(35, 145, 181);
-    margin-top: 1.5rem;
-  }
-
-  .content-section p,
-  .content-section ul li {
-    line-height: 1.7;
-    color: #333;
-    font-size: 1.1rem;
-  }
-
-  .test-section {
-    margin-top: 3rem;
-    text-align: center;
-    background-color: #e3f2fd;
-    padding: 2rem;
-    border-radius: 12px;
-  }
-
-  .test-section h3 {
-    font-size: 1.8rem;
-    margin-bottom: 1rem;
-    color: rgb(21, 129, 188);
-  }
-
-  .test-section p {
-    max-width: 700px;
-    margin: auto;
-    color: #333;
-  }
-
-  .test-section a button {
-    margin-top: 1.5rem;
-    background-color: #0288d1;
-    color: white;
-    border: none;
-    padding: 0.8rem 1.5rem;
-    font-size: 1rem;
-    border-radius: 30px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-
-  .test-section a button:hover {
-    background-color: #01579b;
-  }
-
-  @media (max-width: 768px) {
-    .hero-section h1 {
-      font-size: 2rem;
+{% block title %}Free Anxiety & Depression Tests 2025 | Take Your Social & General Anxiety Test{% endblock title %}
+{% block meta_description %}Free anxiety and depression test for adults and teens. Take online tests for social anxiety, phobias, health anxiety and more. No sign-up required.{% endblock meta_description %}
+{% block meta_keywords %}anxiety test free, anxiety test online free, social anxiety test free, anxiety depression test free, free depression and anxiety test, anxiety test for teens, phobia test free, health anxiety test, anxiety test for adults{% endblock meta_keywords %}
+{% block meta_canonical %}<link rel="canonical" href="https://www.mentalhealthmatters.sbs/anxiety/" />{% endblock meta_canonical %}
+{% block meta_og %}
+    <meta property="og:title" content="Free Anxiety & Depression Tests 2025 | Take Your Social & General Anxiety Test" />
+    <meta property="og:description" content="Free anxiety and depression test for adults and teens. Take online tests for social anxiety, phobias, health anxiety and more. No sign-up required." />
+    <meta property="og:image" content="https://shaurya-bucket-5763394.s3.eu-north-1.amazonaws.com/anxiety-og-image.jpg" />
+    <meta property="og:url" content="https://www.mentalhealthmatters.sbs/anxiety/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en_US" />
+{% endblock meta_og %}
+{% block meta_twitter %}
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Free Anxiety & Depression Tests 2025 | Take Your Social & General Anxiety Test" />
+    <meta name="twitter:description" content="Free anxiety and depression test for adults and teens. Take online tests for social anxiety, phobias, health anxiety and more. No sign-up required." />
+    <meta name="twitter:image" content="https://shaurya-bucket-5763394.s3.eu-north-1.amazonaws.com/anxiety-twitter-image.jpg" />
+{% endblock meta_twitter %}
+{% block structured_data %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MedicalTest",
+  "name": "Anxiety & Depression Self-Assessment Tests",
+  "description": "Free online tests for anxiety and depression including GAD-7, social anxiety, phobias, and combined anxiety-depression screening.",
+  "url": "https://www.mentalhealthmatters.sbs/anxiety/",
+  "provider": {
+    "@type": "Organization",
+    "name": "MentalHealthMatters",
+    "url": "https://www.mentalhealthmatters.sbs"
+  },
+  "category": "https://schema.org/MedicalCondition",
+  "targetCondition": {
+    "@type": "MedicalCondition",
+    "name": "Anxiety Disorders"
+  },
+  "hasMeasurement": [
+    {
+      "@type": "MedicalTest",
+      "name": "GAD-7 Test",
+      "description": "Generalized Anxiety Disorder 7-item scale for screening anxiety severity"
+    },
+    {
+      "@type": "MedicalTest",
+      "name": "Social Anxiety Test",
+      "description": "Assessment for social anxiety disorder symptoms"
+    },
+    {
+      "@type": "MedicalTest",
+      "name": "Phobia Test",
+      "description": "Screening for specific phobias and irrational fears"
+    },
+    {
+      "@type": "MedicalTest",
+      "name": "Anxiety & Depression Combined Test",
+      "description": "Assessment for overlapping symptoms of anxiety and depression"
     }
-    .test-section h3 {
-      font-size: 1.4rem;
-    }
+  ],
+  "knowsAbout": [
+    "Anxiety",
+    "Depression",
+    "Generalized Anxiety Disorder",
+    "Social Anxiety Disorder",
+    "Phobias",
+    "Mental Health Screening"
+  ],
+  "howPerformed": {
+    "@type": "HowToStep",
+    "text": "Complete the online questionnaire with multiple-choice questions",
+    "position": 1
+  },
+  "howPerformed": {
+    "@type": "HowToStep",
+    "text": "Receive instant results with personalized insights and recommendations",
+    "position": 2
   }
-</style>
-{% endblock style %}
-
+}
+</script>
+{% endblock structured_data %}
 {% block body %}
+<!-- Skip to Content Link for Accessibility -->
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
 <div class="hero-sections">
   <h1>Free Anxiety & Depression Self-Tests</h1>
   <p>Take a quick and free anxiety test online. Evaluate social anxiety, depression, phobias, and more using medically reviewed screening tools like the GAD-7. No login required.</p>
 </div>
 
-<div class="content-section">
+<div class="content-section" id="main-content">
   <h2>Why Take an Anxiety Test Online?</h2>
   <p>Millions suffer silently from anxiety, depression, and related disorders. Our online anxiety test is a helpful tool for identifying symptoms of social anxiety, health anxiety, and generalized anxiety disorder (GAD) in adults and teens.</p>
-
+  
   <h2>Symptoms of Anxiety & Depression</h2>
   <ul>
     <li>Persistent feelings of worry or panic</li>
@@ -120,7 +101,7 @@
     <li>Difficulty focusing or restlessness</li>
     <li>Feelings of hopelessness or sadness</li>
   </ul>
-
+  
   <h2>Who Are These Tests For?</h2>
   <p>Our free anxiety tests are suitable for:</p>
   <ul>
@@ -128,7 +109,7 @@
     <li>Teenagers facing social pressure or academic anxiety</li>
     <li>Anyone suspecting signs of depression or phobia</li>
   </ul>
-
+  
   <h2>Test Types Available</h2>
   <ul>
     <li><strong>GAD-7:</strong> Generalized Anxiety Disorder Screening</li>
@@ -136,15 +117,336 @@
     <li><strong>Phobia Test:</strong> Identifies specific phobias or irrational fears</li>
     <li><strong>Anxiety & Depression Combined Test:</strong> For overlapping symptoms</li>
   </ul>
-
+  
   <div class="test-section">
     <h3>Start Your Free Anxiety Test</h3>
     <p>Click below to take the GAD-7 anxiety scale — a validated tool widely used by professionals to measure anxiety levels.</p>
     <a href="{% url 'gad7' %}"><button>Take the Anxiety Test Now</button></a>
   </div>
 </div>
-<div style="display: none;">
-  anxiety test, anxiety quiz, free anxiety test, generalized anxiety disorder test, gad-7 test, test for anxiety, anxiety self assessment, online anxiety quiz, teenage anxiety test, anxiety screening test, social anxiety test, accurate anxiety disorder test
-</div>
 
+<!-- FAQ Section for Better SEO -->
+<section class="faq-section" aria-labelledby="faq-heading">
+  <div class="content-section">
+    <h2 id="faq-heading">Frequently Asked Questions</h2>
+    
+    <div class="faq-item">
+      <h3>Are these anxiety tests clinically validated?</h3>
+      <p>Yes, our tests are based on established clinical screening tools like the GAD-7, which is widely used by healthcare professionals worldwide.</p>
+    </div>
+    
+    <div class="faq-item">
+      <h3>How accurate are online anxiety tests?</h3>
+      <p>Online tests provide a good initial screening but cannot replace a professional diagnosis. They help identify potential symptoms that may warrant further evaluation.</p>
+    </div>
+    
+    <div class="faq-item">
+      <h3>Is my information kept private?</h3>
+      <p>Yes, all test results are completely confidential and not stored on our servers. We prioritize your privacy and data security.</p>
+    </div>
+    
+    <div class="faq-item">
+      <h3>Can teenagers take these tests?</h3>
+      <p>Yes, our tests are designed to be appropriate for both adults and teenagers, though parental guidance is recommended for younger users.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Hidden SEO content for accessibility -->
+<div aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;">
+  <div vocab="https://schema.org/" typeof="MedicalTest">
+    <h1 property="name">Free Anxiety & Depression Tests</h1>
+    <p property="description">Free anxiety and depression test for adults and teens. Take online tests for social anxiety, phobias, health anxiety and more.</p>
+    <div property="provider" typeof="Organization">
+      <span property="name">MentalHealthMatters</span>
+    </div>
+  </div>
+</div>
 {% endblock body %}
+{% block style %}
+<style>
+  /* Critical CSS - Above the fold */
+  :root {
+    --primary: #2a9d8f;
+    --primary-dark: #21867a;
+    --secondary: #0288d1;
+    --secondary-dark: #01579b;
+    --text: #333;
+    --text-light: #666;
+    --background: #f7f9fc;
+    --white: #ffffff;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+  }
+  
+  /* Base Styles */
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: var(--background);
+    color: var(--text);
+    line-height: 1.6;
+  }
+  
+  /* Skip Link */
+  .skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: var(--primary);
+    color: white;
+    padding: 8px;
+    z-index: 100;
+    transition: top 0.3s;
+  }
+  
+  .skip-link:focus {
+    top: 0;
+  }
+  
+  /* Hero Section */
+  .hero-sections {
+    background: url("{% static 'images/gad7-bg.jpg' %}") no-repeat center center/cover;
+    color: #fff;
+    text-align: center;
+    padding: 4rem 2rem;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+    position: relative;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  }
+  
+  .hero-sections::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+  }
+  
+  .hero-sections > * {
+    position: relative;
+    z-index: 1;
+  }
+  
+  .hero-sections h1 {
+    font-size: 2.8rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: #fff;
+  }
+  
+  .hero-sections p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto 1rem;
+    line-height: 1.6;
+  }
+  
+  /* Content Section */
+  .content-section {
+    max-width: 1000px;
+    margin: 0 auto 2rem;
+    padding: 2rem;
+    background-color: var(--white);
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+  }
+  
+  .content-section h2 {
+    color: var(--secondary);
+    margin-top: 1.5rem;
+    font-size: 1.8rem;
+    position: relative;
+    padding-bottom: 0.5rem;
+  }
+  
+  .content-section h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background: var(--secondary);
+  }
+  
+  .content-section p,
+  .content-section ul li {
+    line-height: 1.7;
+    color: var(--text);
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .content-section ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 1rem 0;
+  }
+  
+  .content-section ul li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 0.8rem;
+  }
+  
+  .content-section ul li::before {
+    content: '\f00c';
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    position: absolute;
+    left: 0;
+    color: var(--secondary);
+  }
+  
+  /* Test Section */
+  .test-section {
+    margin-top: 2rem;
+    text-align: center;
+    background-color: #e3f2fd;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  }
+  
+  .test-section h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: var(--secondary);
+  }
+  
+  .test-section p {
+    max-width: 700px;
+    margin: 0 auto 1.5rem;
+    color: var(--text);
+  }
+  
+  .test-section a button {
+    margin-top: 1rem;
+    background-color: var(--secondary);
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    font-size: 1.1rem;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: var(--transition);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .test-section a button:hover {
+    background-color: var(--secondary-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* FAQ Section */
+  .faq-section {
+    margin-top: 3rem;
+  }
+  
+  .faq-section .content-section {
+    margin-bottom: 0;
+  }
+  
+  .faq-item {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .faq-item:last-child {
+    border-bottom: none;
+  }
+  
+  .faq-item h3 {
+    font-size: 1.3rem;
+    color: var(--secondary);
+    margin-bottom: 0.5rem;
+  }
+  
+  .faq-item p {
+    margin-top: 0.5rem;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .hero-sections h1 {
+      font-size: 2rem;
+    }
+    
+    .hero-sections p {
+      font-size: 1rem;
+      padding: 0 1rem;
+    }
+    
+    .content-section h2 {
+      font-size: 1.5rem;
+    }
+    
+    .content-section p,
+    .content-section ul li {
+      font-size: 1rem;
+    }
+    
+    .test-section h3 {
+      font-size: 1.4rem;
+    }
+    
+    .test-section button {
+      width: 100%;
+      padding: 1rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .content-section {
+      padding: 1.5rem;
+    }
+    
+    .test-section {
+      padding: 1.5rem;
+    }
+  }
+</style>
+{% endblock style %}
+{% block scripts %}
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Add focus styles for accessibility
+    const ctaButton = document.querySelector('.test-section button');
+    if (ctaButton) {
+      ctaButton.addEventListener('focus', function() {
+        this.style.boxShadow = '0 0 0 3px rgba(2, 136, 209, 0.3)';
+      });
+      
+      ctaButton.addEventListener('blur', function() {
+        this.style.boxShadow = '0 4px 6px rgba(0, 0, 0, 0.1)';
+      });
+    }
+    
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        
+        const targetId = this.getAttribute('href');
+        if (targetId === '#') return;
+        
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+          window.scrollTo({
+            top: targetElement.offsetTop - 80,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+  });
+</script>
+{% endblock scripts %}
